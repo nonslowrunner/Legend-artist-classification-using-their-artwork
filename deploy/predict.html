@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>prediction</title>
+  </head>
+  <body>
+  	<header>
+  		{% extends "base.html" %} {% block content %}
+  		<div class="bg-dark collapse" id="navbarHeader">
+        <!div class="col-sm-8 col-md-7 py-4">
+        </div>
+    </div>
+
+
+<div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+  	</header>
+  	<main role="main">
+<section class="jumbotron text-center">
+        <div class="container"><br>
+          <h1 class="jumbotron-heading">Artist Classification</h1>
+          <hr></hr>
+          <p class="lead text-muted">Find the top 20 artist of any artwork.</p>
+          	<br>
+          
+  
+            <center><label for="imageUpload" class="upload-label">
+            Select picture</label></center>
+                
+
+            <div class="image-section" style="display:none;">
+                <div class="img-preview">
+                    <div id="imagePreview"></div>
+                      <form method=post enctype=multipart/form-data>   
+                        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                    <br><input id="btn-predict" class="btn btn-secondary my-1" type=submit value=Upload>
+
+                      </form>
+                </div>
+             </div>
+       </section>
+
+
+
+  
+
+    <img class="card-img-top" style="height: 25%; width: 25%; display: block;" src=" {{ url_for('static', filename=file[1])}}" data-holder-rendered="true">
+     <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center">
+
+
+    
+          <div class="container"><br>
+          <h1 class="jumbotron-heading">{{file[0]}}</h1>
+          <hr></hr>
+          <p class="lead text-muted">{{file[2]}}  
+            <br>
+          </div>
+        </div>
+
+
+
+<br></br>
+<hr></hr>
+<center><h4 >Artist name list</h4>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Name</th>
+     <th scope="col">Year</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Leonardo da Vinci</td>
+      <td>1452 - 1519</td>            
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Albrecht Dürer</td>
+      <td>1471 - 1528</td>            
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Rembrandt</td>
+      <td>1606 - 1669</td>            
+    </tr>
+
+    <tr>
+      <th scope="row">4</th>
+      <td>Mikhail Vrubel</td>
+      <td>1856 - 1910</td>            
+    </tr>
+
+    <tr>
+      <th scope="row">5</th>
+      <td>Vincent van Gogh</td>
+      <td>1853 - 1890</td>            
+    </tr>
+
+    <tr>
+      <th scope="row">6</th>
+      <td>Henri Matisse</td>
+      <td>1869 - 1954</td>            
+
+    </tr>
+
+    <tr>
+      <th scope="row">9</th>
+      <td>Pablo Picasso</td>
+      <td>1881 - 1973</td>            
+    </tr>
+
+
+    <tr>
+      <th scope="row">10</th>
+      <td>Peter Paul Rubens</td>
+      <td>1577 - 1640</td>            
+    </tr>
+
+    <tr>
+      <th scope="row">11</th>
+      <td>Amedeo Modigliani</td>
+      <td>1884 - 1920</td>       
+    </tr>
+
+    <tr>
+      <th scope="row">12</th>
+      <td>Pierre Auguste Renoir</td>
+      <td>1841 - 1919</td>       
+    </tr>
+
+    <tr>
+      <th scope="row">13</th>
+      <td>Marc Chagall</td>
+      <td>1887 - 1985</td> 
+    </tr>
+
+    <tr>
+      <th scope="row">14</th>
+      <td>Sandro_Botticelli</td>
+      <td>1445 - 1510</td> 
+    </tr>
+
+    <tr>
+      <th scope="row">14</th>
+      <td>Paul Klee</td>
+      <td>1879 - 1940</td> 
+
+    </tr>
+
+     <tr>
+      <th scope="row">15</th>
+      <td>Andy Warhol</td>
+      <td>1928 - 1987</td> 
+    </tr>
+
+
+    <tr>
+      <th scope="row">16</th>
+      <td>Alfred Sisley</td>
+      <td>1839 - 1899</td> 
+    </tr>
+
+    <tr>
+      <th scope="row">17</th>
+      <td>Titian</td>
+      <td>1488 - 1576</td>
+
+    </tr>
+
+    <tr>
+      <th scope="row">18</th>
+      <td>Rene Magritte</td>
+      <td>1898 - 1967</td>
+
+    </tr>
+
+    <tr>
+      <th scope="row">19</th>
+      <td>Francisco Goya</td>
+      <td>1746 - 1828</td>
+
+    </tr>
+
+    <tr>
+      <th scope="row">20</th>
+      <td>Edgar Degas</td>
+      <td>1834 - 1917</td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+</div>
+          <center><br><a href="/" class="btn btn-dark">Back</a></div>
+  </div>
+
+
+
+
+    
+
+
+    	{% endblock %}
+  </body>
+</html>

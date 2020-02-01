@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Artist</title>
+  </head>
+  <body>
+
+
+  	<header>
+  		  	{% extends "base.html" %} {% block content %}
+
+  		<div class="bg-dark collapse" id="navbarHeader">
+  			<!div class="col-sm-8 col-md-7 py-4">
+  			</div>
+		</div>
+
+
+
+<div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+  	</header>
+
+
+
+	   <section class="jumbotron text-center">
+          <h1 class="jumbotron-heading">Artist Classification</h1>
+          <p class="lead text-muted">Find the top 20 artist of any artwork.</p>
+          	<br>
+
+
+
+        <center><label for="imageUpload" class="upload-label">
+            Upload artworks</label></center>
+
+            <div class="image-section" style="display:none;">
+                <div class="img-preview">
+                    <div id="imagePreview">
+                     
+
+                      </div>
+                    
+      <form method=post enctype=multipart/form-data>   
+
+                        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+
+                        <br><input id="btn-predict" class="btn btn-secondary my-1" type=submit value=Upload>
+                          </form>
+
+
+                       <h3 id="result">
+                <span> </span>
+                      </h3>   
+
+                </div>
+             </div>
+	     </section>
+
+
+
+
+<br>
+<div class="album py-1 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" style="height: 100%; width: 100%; display: block;" src=" static/images/Vincent_van_Gogh_578.jpg" data-holder-rendered="true">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Vincent van Gogh</button>
+             
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+               <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 100%; width: 100%; display: block;" src=" static/images/Leonardo_da_Vinci_121.jpg" data-holder-rendered="true">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Leonardo da Vinci</button>
+             
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+           
+
+          
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+  </body>
+  </div>
+
+	}
+
+    {% endblock %}
+
+
+</html>
